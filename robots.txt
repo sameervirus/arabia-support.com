@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /partials/
+Disallow: /php/
+
+Sitemap: https://www.arabia-support.com/sitemap.xml

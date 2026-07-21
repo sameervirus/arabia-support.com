@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://www.arabia-support.com/index.php</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.arabia-support.com/index.php"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arabia-support.com/en/index.php"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.arabia-support.com/en/index.php</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.arabia-support.com/index.php"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arabia-support.com/en/index.php"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.arabia-support.com/about.php</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.arabia-support.com/about.php"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arabia-support.com/en/about.php"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.arabia-support.com/en/about.php</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.arabia-support.com/about.php"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arabia-support.com/en/about.php"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.arabia-support.com/equipment/index.php</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.arabia-support.com/equipment/index.php"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arabia-support.com/en/equipment/index.php"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.arabia-support.com/en/equipment/index.php</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.arabia-support.com/equipment/index.php"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arabia-support.com/en/equipment/index.php"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.arabia-support.com/equipment/cranes.php</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.arabia-support.com/equipment/cranes.php"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arabia-support.com/en/equipment/cranes.php"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.arabia-support.com/en/equipment/cranes.php</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.arabia-support.com/equipment/cranes.php"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arabia-support.com/en/equipment/cranes.php"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.arabia-support.com/equipment/boom-lifts-telehandlers.php</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.arabia-support.com/equipment/boom-lifts-telehandlers.php"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arabia-support.com/en/equipment/boom-lifts-telehandlers.php"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.arabia-support.com/en/equipment/boom-lifts-telehandlers.php</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.arabia-support.com/equipment/boom-lifts-telehandlers.php"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arabia-support.com/en/equipment/boom-lifts-telehandlers.php"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.arabia-support.com/equipment/scissor-lifts.php</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.arabia-support.com/equipment/scissor-lifts.php"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arabia-support.com/en/equipment/scissor-lifts.php"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.arabia-support.com/en/equipment/scissor-lifts.php</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.arabia-support.com/equipment/scissor-lifts.php"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arabia-support.com/en/equipment/scissor-lifts.php"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.arabia-support.com/equipment/tools-general-equipment.php</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.arabia-support.com/equipment/tools-general-equipment.php"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arabia-support.com/en/equipment/tools-general-equipment.php"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.arabia-support.com/en/equipment/tools-general-equipment.php</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.arabia-support.com/equipment/tools-general-equipment.php"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arabia-support.com/en/equipment/tools-general-equipment.php"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.arabia-support.com/clients.php</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.arabia-support.com/clients.php"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arabia-support.com/en/clients.php"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.arabia-support.com/en/clients.php</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.arabia-support.com/clients.php"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arabia-support.com/en/clients.php"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.arabia-support.com/contact.php</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.arabia-support.com/contact.php"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arabia-support.com/en/contact.php"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.arabia-support.com/en/contact.php</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.arabia-support.com/contact.php"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.arabia-support.com/en/contact.php"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
