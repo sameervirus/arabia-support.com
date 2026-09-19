@@ -79,6 +79,7 @@ $mapQuery = urlencode('arconsegypt');
           data-success-label="Your request has been received. Our team will contact you shortly."
           data-error-label="Something went wrong while sending. Please try again or call us directly.">
           <input type="hidden" name="lang" value="en">
+          <input type="hidden" name="ts" value="<?= time() ?>">
           <div class="form-row">
             <div class="field">
               <label for="name">Full Name *</label>

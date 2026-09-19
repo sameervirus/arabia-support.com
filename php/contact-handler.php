@@ -26,26 +26,70 @@ if (!empty($_POST['company'])) {
   respond(true); // silently pretend success to the bot
 }
 
-function clean_line(string $value): string {
+// Time-trap: the form embeds its render time; genuine users need at least a
+// couple of seconds to fill it in, bots submit almost instantly.
+$renderedAt = (int)($_POST['ts'] ?? 0);
+if ($renderedAt <= 0 || time() - $renderedAt < 3) {
+  respond(true); // silently pretend success to the bot
+}
+
+// Basic per-IP rate limiting so a script can't hammer the mailer.
+function client_ip(): string {
+  return (string)($_SERVER['REMOTE_ADDR'] ?? 'unknown');
+}
+
+function rate_limited(string $ip, int $cooldownSeconds = 30): bool {
+  $dir = sys_get_temp_dir() . '/arabia-support-contact-throttle';
+  if (!is_dir($dir) && !@mkdir($dir, 0700, true) && !is_dir($dir)) {
+    return false; // can't track it, fail open rather than blocking real users
+  }
+  $file = $dir . '/' . hash('sha256', $ip) . '.txt';
+  $last = @file_get_contents($file);
+  $now  = time();
+  if ($last !== false && $now - (int)$last < $cooldownSeconds) {
+    return true;
+  }
+  @file_put_contents($file, (string)$now);
+  return false;
+}
+
+if (rate_limited(client_ip())) {
+  http_response_code(429);
+  respond(false, $lang === 'ar' ? 'برجاء الانتظار قليلاً قبل إرسال طلب آخر.' : 'Please wait a moment before sending another request.');
+}
+
+function clean_line(string $value, int $maxLength = 200): string {
   $value = trim($value);
-  return preg_replace('/[\r\n]+/', ' ', $value);
+  $value = preg_replace('/[\r\n]+/', ' ', $value);
+  return mb_substr($value, 0, $maxLength);
 }
 
 $lang     = ($_POST['lang'] ?? 'ar') === 'en' ? 'en' : 'ar';
-$name     = clean_line((string)($_POST['name'] ?? ''));
-$phone    = clean_line((string)($_POST['phone'] ?? ''));
-$email    = clean_line((string)($_POST['email'] ?? ''));
-$equipment= clean_line((string)($_POST['equipment'] ?? ''));
-$message  = trim((string)($_POST['message'] ?? ''));
+$name     = clean_line((string)($_POST['name'] ?? ''), 100);
+$phone    = clean_line((string)($_POST['phone'] ?? ''), 30);
+$email    = clean_line((string)($_POST['email'] ?? ''), 150);
+$equipment= clean_line((string)($_POST['equipment'] ?? ''), 50);
+$message  = mb_substr(trim((string)($_POST['message'] ?? '')), 0, 3000);
 
 if ($name === '' || $phone === '') {
   http_response_code(422);
   respond(false, $lang === 'ar' ? 'من فضلك أدخل الاسم ورقم التليفون.' : 'Please enter your name and phone number.');
 }
 
+if (!preg_match('/^[+0-9\s()\-\/]{6,25}$/', $phone)) {
+  http_response_code(422);
+  respond(false, $lang === 'ar' ? 'صيغة رقم التليفون غير صحيحة.' : 'Please enter a valid phone number.');
+}
+
 if ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
   http_response_code(422);
   respond(false, $lang === 'ar' ? 'صيغة البريد الإلكتروني غير صحيحة.' : 'Please enter a valid email address.');
+}
+
+// Spam heuristic: legitimate quote requests don't carry multiple links.
+$linkCount = preg_match_all('/https?:\/\/|www\./i', $name . ' ' . $message);
+if ($linkCount >= 2) {
+  respond(true); // silently pretend success to the bot
 }
 
 $equipmentLabels = [
