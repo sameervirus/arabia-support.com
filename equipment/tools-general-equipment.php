@@ -19,6 +19,7 @@ require __DIR__ . '/../partials/header.php';
 
 <section class="section">
   <div class="container">
+    <h2 class="sr-only">قائمة الأدوات والمعدات</h2>
     <div class="cards-grid" data-reveal>
 
       <div class="eq-card">

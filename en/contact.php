@@ -2,11 +2,11 @@
 $lang    = 'en';
 $pageKey = 'contact';
 $title   = 'Contact Us | Al-Arabia for Renting and Maintaining Tools and Equipment';
-$description = 'Get in touch with Al-Arabia for Renting and Maintaining Tools and Equipment to request a quote or ask about cranes, boom lifts, scissor lifts, and tools. Phone: 01027762665.';
+$description = 'Get in touch with Al-Arabia for Renting and Maintaining Tools and Equipment to request a quote for equipment rental or for maintenance, welding, and hardfacing services. Phone: 01027762665.';
 require_once __DIR__ . '/../partials/config.php';
 require __DIR__ . '/../partials/head.php';
 require __DIR__ . '/../partials/header.php';
-$mapQuery = urlencode('arconsegypt');
+$mapQuery = $SITE['map_coords'];
 ?>
 
 <section class="page-header">
@@ -22,15 +22,25 @@ $mapQuery = urlencode('arconsegypt');
 
     <div data-reveal>
       <div class="contact-card">
-        <h3>Contact Information</h3>
+        <h2>Contact Information</h2>
         <div class="contact-line">
           <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path
                 d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
             </svg></span>
           <div>
-            <strong>Phone</strong>
-            <a href="tel:<?= $SITE['phone_intl'] ?>"><?= $SITE['phone'] ?></a>
+            <strong>Equipment Rental</strong>
+            <a href="tel:<?= $SITE['phone_intl'] ?>" dir="ltr"><?= $SITE['phone'] ?></a>
+          </div>
+        </div>
+        <div class="contact-line">
+          <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg></span>
+          <div>
+            <strong>Maintenance & Welding</strong>
+            <a href="tel:<?= $SITE['phone_svc_intl'] ?>" dir="ltr"><?= $SITE['phone_svc'] ?></a>
           </div>
         </div>
         <div class="contact-line">
@@ -67,14 +77,14 @@ $mapQuery = urlencode('arconsegypt');
           rel="noopener">Message Us on WhatsApp</a>
       </div>
       <div class="map-embed">
-        <iframe src="https://www.google.com/maps?q=<?= $mapQuery ?>&output=embed" loading="lazy"
+        <iframe src="https://www.google.com/maps?q=<?= $mapQuery ?>&z=15&output=embed" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade" title="Our location on the map"></iframe>
       </div>
     </div>
 
     <div data-reveal>
       <div class="form-card">
-        <h3 style="font-size:1.3rem;font-weight:800;color:var(--navy-900);margin-bottom:22px">Request a Quote</h3>
+        <h2 style="font-size:1.3rem;font-weight:800;color:var(--navy-900);margin-bottom:22px">Request a Quote</h2>
         <form id="quote-form" action="/php/contact-handler.php" method="post" data-sending-label="Sending..."
           data-success-label="Your request has been received. Our team will contact you shortly."
           data-error-label="Something went wrong while sending. Please try again or call us directly.">
@@ -96,13 +106,17 @@ $mapQuery = urlencode('arconsegypt');
               <input type="email" id="email" name="email">
             </div>
             <div class="field">
-              <label for="equipment">Equipment Needed</label>
+              <label for="equipment">Service Needed</label>
+              <?php $preselect = (string)($_GET['service'] ?? ''); ?>
               <select id="equipment" name="equipment">
-                <option value="">Select equipment type</option>
-                <option value="cranes">Cranes</option>
-                <option value="boom-lifts">Boom Lifts / Telehandlers</option>
-                <option value="scissor-lifts">Scissor Lifts</option>
-                <option value="tools">Tools & General Equipment</option>
+                <option value="">Select a service or equipment</option>
+                <?php foreach ($SERVICE_OPTIONS as $group): ?>
+                <optgroup label="<?= htmlspecialchars($group['label']['en']) ?>">
+                  <?php foreach ($group['items'] as $key => $labels): ?>
+                  <option value="<?= $key ?>" <?= $preselect === $key ? 'selected' : '' ?>><?= htmlspecialchars($labels['en']) ?></option>
+                  <?php endforeach; ?>
+                </optgroup>
+                <?php endforeach; ?>
                 <option value="other">Other</option>
               </select>
             </div>
@@ -110,7 +124,7 @@ $mapQuery = urlencode('arconsegypt');
           <div class="field">
             <label for="message">Request Details</label>
             <textarea id="message" name="message"
-              placeholder="Rental duration, project location, and any other details..."></textarea>
+              placeholder="Rental duration and project location, or a description of the part and the problem..."></textarea>
           </div>
           <div class="field" style="display:none">
             <label for="company">Company</label>

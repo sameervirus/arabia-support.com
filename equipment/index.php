@@ -18,6 +18,7 @@ require __DIR__ . '/../partials/header.php';
 
 <section class="section">
   <div class="container">
+    <h2 class="sr-only">فئات المعدات</h2>
     <div class="cards-grid" data-reveal>
 
       <div class="eq-card">
@@ -31,7 +32,7 @@ require __DIR__ . '/../partials/header.php';
         </span>
         <h3>الأوناش (الكرينات)</h3>
         <p>All Terrain، Rough Terrain، وTruck Cranes بقدرات رفع من 30 إلى 80 طن.</p>
-        <a href="/equipment/cranes.php" class="eq-more">عرض التفاصيل
+        <a href="/equipment/cranes.php" class="eq-more">عرض التفاصيل<span class="sr-only"> عن الأوناش (الكرينات)</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M13 6l6 6-6 6" />
           </svg>
@@ -49,7 +50,7 @@ require __DIR__ . '/../partials/header.php';
         </span>
         <h3>بوم ليفت وتلي هاندلر</h3>
         <p>بوم ليفت تليسكوبي ومفصلي حتى 40 متر، وتلي هاندلر بقدرة تحميل حتى 4 طن.</p>
-        <a href="/equipment/boom-lifts-telehandlers.php" class="eq-more">عرض التفاصيل
+        <a href="/equipment/boom-lifts-telehandlers.php" class="eq-more">عرض التفاصيل<span class="sr-only"> عن بوم ليفت وتلي هاندلر</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M13 6l6 6-6 6" />
           </svg>
@@ -66,7 +67,7 @@ require __DIR__ . '/../partials/header.php';
         </span>
         <h3>سيزر ليفت (Scissor Lifts)</h3>
         <p>منصات رفع للأعمال الداخلية والخارجية بارتفاعات تصل إلى 18 متر.</p>
-        <a href="/equipment/scissor-lifts.php" class="eq-more">عرض التفاصيل
+        <a href="/equipment/scissor-lifts.php" class="eq-more">عرض التفاصيل<span class="sr-only"> عن سيزر ليفت (Scissor Lifts)</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M13 6l6 6-6 6" />
           </svg>
@@ -82,7 +83,7 @@ require __DIR__ . '/../partials/header.php';
         </span>
         <h3>أدوات ومعدات عامة</h3>
         <p>مولدات، كمبروسورات، ماكينات لحام ومعالجة حرارية، سقالات، معدات مساحة ورفع.</p>
-        <a href="/equipment/tools-general-equipment.php" class="eq-more">عرض التفاصيل
+        <a href="/equipment/tools-general-equipment.php" class="eq-more">عرض التفاصيل<span class="sr-only"> عن أدوات ومعدات عامة</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M13 6l6 6-6 6" />
           </svg>

@@ -31,7 +31,7 @@ require __DIR__ . '/../partials/header.php';
           </div>
         </div>
         <div>
-          <h4>بوم ليفت تليسكوبي (Telescopic Boom Lift)</h4>
+          <h3>بوم ليفت تليسكوبي (Telescopic Boom Lift)</h3>
           <p>ذراع مستقيم يوفر أقصى مدى أفقي، مثالي للوصول إلى نقاط بعيدة بارتفاع يصل حتى 34 مترًا وسعة منصة تحميل حتى
             500 كيلوجرام.</p>
           <div class="fleet-tags">
@@ -48,7 +48,7 @@ require __DIR__ . '/../partials/header.php';
           </div>
         </div>
         <div>
-          <h4>بوم ليفت مفصلي (Articulating Boom Lift)</h4>
+          <h3>بوم ليفت مفصلي (Articulating Boom Lift)</h3>
           <p>ذراع مفصلي يمكّن الوصول فوق وحول العوائق للوصول الدقيق، بارتفاعات منصة من 20 إلى 40 مترًا.</p>
           <div class="fleet-tags">
             <span>ارتفاع 20 - 40 م</span>
@@ -74,7 +74,7 @@ require __DIR__ . '/../partials/header.php';
           </div>
         </div>
         <div>
-          <h4>تلي هاندلر (Telehandler)</h4>
+          <h3>تلي هاندلر (Telehandler)</h3>
           <p>ذراع قوي فائق يوفر رفعًا أعلى وأبعد بثقة أكبر، بموديلات متعددة القدرات والارتفاعات لتناسب احتياجات موقع
             العمل، بارتفاعات حتى 18 مترًا وسعة تحميل حتى 4 طن.</p>
           <div class="fleet-tags">

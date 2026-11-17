@@ -92,13 +92,12 @@ if ($linkCount >= 2) {
   respond(true); // silently pretend success to the bot
 }
 
-$equipmentLabels = [
-  'cranes'        => 'Cranes / الأوناش',
-  'boom-lifts'    => 'Boom Lifts & Telehandlers / بوم ليفت وتلي هاندلر',
-  'scissor-lifts' => 'Scissor Lifts / سيزر ليفت',
-  'tools'         => 'Tools & General Equipment / أدوات ومعدات عامة',
-  'other'         => 'Other / أخرى',
-];
+$equipmentLabels = ['other' => 'Other / أخرى'];
+foreach ($SERVICE_OPTIONS as $group) {
+  foreach ($group['items'] as $key => $labels) {
+    $equipmentLabels[$key] = $labels['en'] . ' / ' . $labels['ar'];
+  }
+}
 
 $subject = ($lang === 'ar' ? 'طلب عرض سعر جديد من الموقع' : 'New quote request from the website');
 
@@ -106,7 +105,7 @@ $bodyLines = [
   'Name / الاسم: ' . $name,
   'Phone / التليفون: ' . $phone,
   'Email / البريد الإلكتروني: ' . ($email !== '' ? $email : '-'),
-  'Equipment / المعدة المطلوبة: ' . ($equipmentLabels[$equipment] ?? '-'),
+  'Service / الخدمة المطلوبة: ' . ($equipmentLabels[$equipment] ?? '-'),
   'Language / اللغة: ' . strtoupper($lang),
   '',
   'Message / تفاصيل الطلب:',
@@ -127,8 +126,8 @@ $sent = @mail($SITE['email'], '=?UTF-8?B?' . base64_encode($subject) . '?=', $bo
 if (!$sent) {
   http_response_code(500);
   respond(false, $lang === 'ar'
-    ? 'تعذر إرسال الطلب حاليًا، برجاء التواصل عبر التليفون: ' . $SITE['phone']
-    : 'Could not send your request right now, please call us at: ' . $SITE['phone']);
+    ? 'تعذر إرسال الطلب حاليًا، برجاء التواصل عبر التليفون: التأجير ' . $SITE['phone'] . ' — الصيانة واللحام ' . $SITE['phone_svc']
+    : 'Could not send your request right now, please call us at: Rental ' . $SITE['phone'] . ' — Maintenance & Welding ' . $SITE['phone_svc']);
 }
 
 respond(true, $lang === 'ar' ? 'تم استلام طلبكم بنجاح.' : 'Your request has been received.');

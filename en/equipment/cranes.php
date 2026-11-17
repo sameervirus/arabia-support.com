@@ -34,7 +34,7 @@ require __DIR__ . '/../../partials/header.php';
           </div>
         </div>
         <div>
-          <h4>All Terrain Cranes</h4>
+          <h3>All Terrain Cranes</h3>
           <p>Versatile cranes with highway speed capacity and maneuverability, ideal for both on- and off-road
             construction and industrial projects. All terrain cranes can access confined job sites with all-wheel
             steering.</p>
@@ -53,7 +53,7 @@ require __DIR__ . '/../../partials/header.php';
           </div>
         </div>
         <div>
-          <h4>Rough Terrain Cranes</h4>
+          <h3>Rough Terrain Cranes</h3>
           <p>Compact cranes with a single cab for both driving and lifting operation. They offer great maneuverability
             in narrow spaces and can be driven on rough or uneven terrain thanks to all-wheel drive.</p>
           <div class="fleet-tags">
@@ -71,7 +71,7 @@ require __DIR__ . '/../../partials/header.php';
           </div>
         </div>
         <div>
-          <h4>Truck Cranes</h4>
+          <h3>Truck Cranes</h3>
           <p>Heavy-duty equipment that relies on an internal hydraulic system to hoist and lift heavy loads. They're set
             on wheels to give them greater mobility on the job site.</p>
           <div class="fleet-tags">

@@ -2,7 +2,7 @@
 $lang    = 'en';
 $pageKey = 'clients';
 $title   = 'Our Clients & Industries | Al-Arabia for Renting and Maintaining Tools and Equipment';
-$description = 'We work with construction contractors and industrial facilities across the power, oil & petrochemical, and manufacturing sectors, providing reliable lifting and installation equipment tailored to each industry.';
+$description = 'We work with construction contractors, industrial facilities, and cement plants across Egypt, in lifting equipment rental and in maintenance, welding, and hardfacing services.';
 require_once __DIR__ . '/../partials/config.php';
 require __DIR__ . '/../partials/head.php';
 require __DIR__ . '/../partials/header.php';
@@ -65,10 +65,10 @@ require __DIR__ . '/../partials/header.php';
 <section class="section bg-tint">
   <div class="container">
     <div class="section-head center">
-      <span class="eyebrow">Partners in Success</span>
-      <h2 class="section-title">Client Logos</h2>
-      <p class="section-sub">This section is reserved for your actual client logos — add your partner companies' logos
-        here to build trust with visitors.</p>
+      <span class="eyebrow">Equipment Rental</span>
+      <h2 class="section-title">Equipment Rental Clients</h2>
+      <p class="section-sub" style="margin-inline:auto">Contractors and industrial companies that rely on our equipment
+        fleet for their projects.</p>
     </div>
     <div class="logo-grid" data-reveal>
       <div class="logo-slot"><img src="/assets/img/clients/CCC.gif" /></div>
@@ -82,10 +82,25 @@ require __DIR__ . '/../partials/header.php';
 
 <section class="section">
   <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow svc">Maintenance & Welding</span>
+      <h2 class="section-title">Maintenance & Welding Clients</h2>
+      <p class="section-sub" style="margin-inline:auto">Cement, fertilizer, and heavy-industry plants that trust our maintenance and welding team.</p>
+    </div>
+    <div class="logo-grid cols-4" data-reveal>
+      <?php foreach ($SERVICE_CLIENTS as $file => $names): ?>
+      <div class="logo-slot"><img src="/assets/img/clients/<?= $file ?>" alt="<?= htmlspecialchars($names['en']) ?>" loading="lazy"></div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
     <div class="cta-band" data-reveal>
       <div>
         <h3>Want to become one of our clients?</h3>
-        <p>Get in touch and let's discuss your project's lifting and installation equipment needs.</p>
+        <p>Get in touch and let's discuss your project's equipment needs or your plant's maintenance and welding needs.</p>
       </div>
       <div style="display:flex;gap:14px;flex-wrap:wrap">
         <a href="/en/contact.php" class="btn btn-primary">Contact Us</a>

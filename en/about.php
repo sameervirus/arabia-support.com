@@ -2,7 +2,7 @@
 $lang    = 'en';
 $pageKey = 'about';
 $title   = 'About Us | Al-Arabia for Renting and Maintaining Tools and Equipment';
-$description = 'Learn about Al-Arabia for Renting and Maintaining Tools and Equipment: our approach, our commitment to safety and quality, and our lifting and installation equipment services for construction and industrial projects in Egypt.';
+$description = 'Learn about Al-Arabia for Renting and Maintaining Tools and Equipment: lifting and installation equipment rental, and industrial maintenance, welding, and hardfacing services for construction and heavy industry in Egypt.';
 require_once __DIR__ . '/../partials/config.php';
 require __DIR__ . '/../partials/head.php';
 require __DIR__ . '/../partials/header.php';
@@ -12,8 +12,8 @@ require __DIR__ . '/../partials/header.php';
   <div class="container">
     <div class="breadcrumb"><a href="/en/index.php">Home</a> / <span>About Us</span></div>
     <h1>About Us</h1>
-    <p>Your specialized partner in lifting, installation, and supporting equipment rental for construction and
-      industrial projects.</p>
+    <p>Your specialized partner in equipment rental for construction and industrial projects, and in maintenance,
+      welding, and hardfacing for heavy industry.</p>
   </div>
 </section>
 
@@ -25,7 +25,7 @@ require __DIR__ . '/../partials/header.php';
       </div>
     </div>
     <div data-reveal>
-      <span class="eyebrow">Our Story</span>
+      <span class="eyebrow">Equipment Rental</span>
       <h2 class="section-title">Lifting & installation equipment rental you can rely on</h2>
       <p class="section-sub">
         Al-Arabia for Renting and Maintaining Tools and Equipment was established to meet the needs of construction
@@ -40,6 +40,31 @@ require __DIR__ . '/../partials/header.php';
         delivering and installing it on schedule, and following up with regular maintenance throughout
         the rental period.
       </p>
+    </div>
+  </div>
+</section>
+
+<section class="section svc-block" style="padding-top:0">
+  <div class="container split">
+    <div data-reveal>
+      <span class="eyebrow svc">Maintenance & Welding</span>
+      <h2 class="section-title">Welding-metallurgy expertise for heavy industry</h2>
+      <p class="section-sub">Alongside equipment rental, our maintenance team has served cement plants and heavy
+        industry for more than a decade — repairing cracks and fractures in critical components, hardfacing vertical
+        roller mills and crushers in situ, and protecting equipment with arc-spray coatings.</p>
+      <p class="section-sub">Through our partnership with Vietnam-based BCC, we now manufacture CCO and D-Plate™ wear
+        plates locally, and our workshop carries out metal fabrication in accordance with ASME specifications.</p>
+      <ul class="check-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="currentColor"><path d="M20 6 9 17l-5-5" /></svg> 250+ vertical roller mill hardfacing jobs</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="currentColor"><path d="M20 6 9 17l-5-5" /></svg> Difficult-to-weld alloys: cast iron, manganese and high-alloy steels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="currentColor"><path d="M20 6 9 17l-5-5" /></svg> Trusted by leading cement producers in Egypt</li>
+      </ul>
+      <a href="/en/services/index.php" class="btn btn-svc">Explore Maintenance Services</a>
+    </div>
+    <div class="photo-grid" data-reveal>
+      <figure class="wide"><img src="/assets/img/services/dplate-pipe.jpg" alt="Welding a wear-resistant pipe in our workshop" width="1200" height="923" loading="lazy"></figure>
+      <figure><img src="/assets/img/services/vrm-roller-welding.jpg" alt="Automated hardfacing of a VRM roller" width="900" height="1507" loading="lazy"></figure>
+      <figure><img src="/assets/img/services/repair-mill-welder.jpg" alt="On-site repair inside a mill" width="900" height="1168" loading="lazy"></figure>
     </div>
   </div>
 </section>

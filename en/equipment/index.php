@@ -18,6 +18,7 @@ require __DIR__ . '/../../partials/header.php';
 
 <section class="section">
   <div class="container">
+    <h2 class="sr-only">Equipment categories</h2>
     <div class="cards-grid" data-reveal>
 
       <div class="eq-card">
@@ -31,7 +32,7 @@ require __DIR__ . '/../../partials/header.php';
         </span>
         <h3>Cranes</h3>
         <p>All Terrain, Rough Terrain, and Truck Cranes with lifting capacities from 30 to 80 tons.</p>
-        <a href="/en/equipment/cranes.php" class="eq-more">View Details
+        <a href="/en/equipment/cranes.php" class="eq-more">View Details<span class="sr-only"> about Cranes</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M13 6l6 6-6 6" />
           </svg>
@@ -49,7 +50,7 @@ require __DIR__ . '/../../partials/header.php';
         </span>
         <h3>Boom Lifts & Telehandlers</h3>
         <p>Telescopic and articulating boom lifts up to 40m, and telehandlers with capacity up to 4 tons.</p>
-        <a href="/en/equipment/boom-lifts-telehandlers.php" class="eq-more">View Details
+        <a href="/en/equipment/boom-lifts-telehandlers.php" class="eq-more">View Details<span class="sr-only"> about Boom Lifts & Telehandlers</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M13 6l6 6-6 6" />
           </svg>
@@ -66,7 +67,7 @@ require __DIR__ . '/../../partials/header.php';
         </span>
         <h3>Scissor Lifts</h3>
         <p>Indoor and outdoor lift platforms with heights up to 18 meters.</p>
-        <a href="/en/equipment/scissor-lifts.php" class="eq-more">View Details
+        <a href="/en/equipment/scissor-lifts.php" class="eq-more">View Details<span class="sr-only"> about Scissor Lifts</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M13 6l6 6-6 6" />
           </svg>
@@ -82,7 +83,7 @@ require __DIR__ . '/../../partials/header.php';
         </span>
         <h3>Tools & General Equipment</h3>
         <p>Generators, compressors, welding & heat treatment machines, scaffolding, survey and rigging equipment.</p>
-        <a href="/en/equipment/tools-general-equipment.php" class="eq-more">View Details
+        <a href="/en/equipment/tools-general-equipment.php" class="eq-more">View Details<span class="sr-only"> about Tools & General Equipment</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M13 6l6 6-6 6" />
           </svg>

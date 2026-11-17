@@ -21,6 +21,7 @@ require __DIR__ . '/../../partials/header.php';
 
 <section class="section">
   <div class="container">
+    <h2 class="sr-only">Tools and equipment list</h2>
     <div class="cards-grid" data-reveal>
 
       <div class="eq-card">

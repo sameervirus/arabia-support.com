@@ -1,3 +1,5 @@
+</main>
+
 <?php $isAr = $lang === 'ar'; ?>
 <a href="https://wa.me/<?= $SITE['whatsapp'] ?>" class="wa-float" aria-label="WhatsApp" target="_blank" rel="noopener">
   <svg viewBox="0 0 24 24" fill="currentColor">
@@ -16,13 +18,13 @@
           </span>
           <span class="brand-text">
             <strong style="color:#fff"><?= $isAr ? $SITE['short_ar'] : $SITE['short_en'] ?></strong>
-            <span><?= $isAr ? 'لتأجير المعدات' : 'Equipment Rental' ?></span>
+            <span><?= $isAr ? 'تأجير المعدات • الصيانة واللحام' : 'Equipment Rental • Maintenance & Welding' ?></span>
           </span>
         </a>
         <p>
           <?= $isAr
-            ? 'شريككم الموثوق في تأجير معدات الرفع والتركيب والمعدات المساندة لمشاريع الإنشاءات والصناعة في مصر، بأعلى معايير السلامة والجاهزية.'
-            : 'Your trusted partner for lifting, installation, and support equipment rental serving construction and industrial projects across Egypt, with the highest safety and readiness standards.' ?>
+            ? 'شريككم الموثوق في تأجير معدات الرفع والتركيب، وفي حلول الصيانة واللحام والتقسية الصناعية لمصانع الأسمنت والصناعات الثقيلة في مصر.'
+            : 'Your trusted partner for lifting and installation equipment rental, and for industrial maintenance, welding, and hardfacing solutions for cement plants and heavy industry across Egypt.' ?>
         </p>
         <div class="social-row">
           <a href="https://web.facebook.com/AlArabiaRental" target="_blank" aria-label="Facebook"><svg
@@ -43,18 +45,19 @@
       </div>
 
       <div class="footer-col">
-        <h5><?= $isAr ? 'روابط سريعة' : 'Quick Links' ?></h5>
+        <h2><?= $isAr ? 'روابط سريعة' : 'Quick Links' ?></h2>
         <ul>
           <li><a href="<?= ph_url('home', $lang) ?>"><?= $isAr ? 'الرئيسية' : 'Home' ?></a></li>
           <li><a href="<?= ph_url('about', $lang) ?>"><?= $isAr ? 'من نحن' : 'About Us' ?></a></li>
-          <li><a href="<?= ph_url('equipment', $lang) ?>"><?= $isAr ? 'المعدات' : 'Equipment' ?></a></li>
+          <li><a href="<?= ph_url('equipment', $lang) ?>"><?= $isAr ? 'تأجير المعدات' : 'Equipment Rental' ?></a></li>
+          <li><a href="<?= ph_url('services', $lang) ?>"><?= $isAr ? 'الصيانة واللحام' : 'Maintenance & Welding' ?></a></li>
           <li><a href="<?= ph_url('clients', $lang) ?>"><?= $isAr ? 'عملاؤنا' : 'Our Clients' ?></a></li>
           <li><a href="<?= ph_url('contact', $lang) ?>"><?= $isAr ? 'اتصل بنا' : 'Contact Us' ?></a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h5><?= $isAr ? 'أقسام المعدات' : 'Equipment Categories' ?></h5>
+        <h2><?= $isAr ? 'تأجير المعدات' : 'Equipment Rental' ?></h2>
         <ul>
           <li><a href="<?= ph_url('cranes', $lang) ?>"><?= $isAr ? 'الأوناش (الكرينات)' : 'Cranes' ?></a></li>
           <li><a
@@ -68,9 +71,22 @@
       </div>
 
       <div class="footer-col">
-        <h5><?= $isAr ? 'بيانات التواصل' : 'Contact Info' ?></h5>
+        <h2><?= $isAr ? 'الصيانة واللحام' : 'Maintenance & Welding' ?></h2>
+        <?php $svcUrl = ph_url('services', $lang); ?>
         <ul>
-          <li><a href="tel:<?= $SITE['phone_intl'] ?>"><?= $SITE['phone'] ?></a></li>
+          <li><a href="<?= $svcUrl ?>#repair"><?= $isAr ? 'إصلاح الأعطال والكسور' : 'Repair of Damage' ?></a></li>
+          <li><a href="<?= $svcUrl ?>#hardfacing"><?= $isAr ? 'تقسية الطواحين والكسارات' : 'Mill & Crusher Hardfacing' ?></a></li>
+          <li><a href="<?= $svcUrl ?>#wear-plates"><?= $isAr ? 'ألواح مقاومة التآكل' : 'Wear Plates' ?></a></li>
+          <li><a href="<?= $svcUrl ?>#coating"><?= $isAr ? 'طلاءات الحماية' : 'Protection Coating' ?></a></li>
+          <li><a href="<?= $svcUrl ?>#fabrication"><?= $isAr ? 'التصنيع المعدني' : 'Metal Fabrication' ?></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h2><?= $isAr ? 'بيانات التواصل' : 'Contact Info' ?></h2>
+        <ul>
+          <li><?= $isAr ? 'التأجير:' : 'Rental:' ?> <a href="tel:<?= $SITE['phone_intl'] ?>" dir="ltr"><?= $SITE['phone'] ?></a></li>
+          <li><?= $isAr ? 'الصيانة واللحام:' : 'Maintenance:' ?> <a href="tel:<?= $SITE['phone_svc_intl'] ?>" dir="ltr"><?= $SITE['phone_svc'] ?></a></li>
           <li><a href="mailto:<?= $SITE['email'] ?>"><?= $SITE['email'] ?></a></li>
           <li><?= $isAr ? $SITE['address_ar'] : $SITE['address_en'] ?></li>
         </ul>

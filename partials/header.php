@@ -4,16 +4,20 @@
 $isAr = $lang === 'ar';
 $otherLang = $isAr ? 'en' : 'ar';
 $switchUrl = $SITE['base_url'] . ph_url($pageKey, $otherLang);
+// Maintenance & welding page shows that line's mobile; every other page shows the rental mobile
+$isSvcPage = $pageKey === 'services';
+$hdrPhone     = $isSvcPage ? $SITE['phone_svc'] : $SITE['phone'];
+$hdrPhoneIntl = $isSvcPage ? $SITE['phone_svc_intl'] : $SITE['phone_intl'];
 ?>
 <div class="topbar">
   <div class="container">
     <div class="topbar-links">
-      <a href="tel:<?= $SITE['phone_intl'] ?>">
+      <a href="tel:<?= $hdrPhoneIntl ?>">
         <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path
             d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
         </svg>
-        <?= $SITE['phone'] ?>
+        <?= $hdrPhone ?>
       </a>
       <a href="mailto:<?= $SITE['email'] ?>">
         <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -48,7 +52,7 @@ $switchUrl = $SITE['base_url'] . ph_url($pageKey, $otherLang);
       </span>
       <span class="brand-text">
         <strong><?= $isAr ? $SITE['short_ar'] : $SITE['short_en'] ?></strong>
-        <span><?= $isAr ? 'لتأجير وصيانة العدد والمعدات' : 'for Renting and Maintaining Tools and Equipment.' ?></span>
+        <span><?= $isAr ? 'لتأجير وصيانة العدد والمعدات' : 'for Renting and Maintaining Tools and Equipment' ?></span>
       </span>
     </a>
 
@@ -62,7 +66,7 @@ $switchUrl = $SITE['base_url'] . ph_url($pageKey, $otherLang);
     </nav>
 
     <div class="header-cta">
-      <a href="tel:<?= $SITE['phone_intl'] ?>" class="btn btn-outline">
+      <a href="tel:<?= $hdrPhoneIntl ?>" class="btn btn-outline">
         <?= $isAr ? 'اتصل الآن' : 'Call Now' ?>
       </a>
       <a href="<?= ph_url('contact', $lang) ?>" class="btn btn-primary">
@@ -89,7 +93,8 @@ $switchUrl = $SITE['base_url'] . ph_url($pageKey, $otherLang);
     </button>
   </div>
   <?php foreach ($NAV as $item): ?>
-  <a href="<?= ph_url($item['key'], $lang) ?>" class="<?= $pageKey === $item['key'] ? 'is-active' : '' ?>">
+  <a href="<?= ph_url($item['key'], $lang) ?>"
+    class="<?= $pageKey === $item['key'] || ($item['key'] === 'equipment' && in_array($pageKey, ['cranes', 'boom-lifts', 'scissor-lifts', 'tools'])) ? 'is-active' : '' ?>">
     <?= $isAr ? $item['ar'] : $item['en'] ?>
   </a>
   <?php endforeach; ?>
@@ -97,3 +102,5 @@ $switchUrl = $SITE['base_url'] . ph_url($pageKey, $otherLang);
   <a href="<?= ph_url('contact', $lang) ?>"
     class="btn btn-primary btn-block"><?= $isAr ? 'اطلب عرض سعر' : 'Get a Quote' ?></a>
 </div>
+
+<main id="main-content">

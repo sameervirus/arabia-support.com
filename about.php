@@ -2,7 +2,7 @@
 $lang    = 'ar';
 $pageKey = 'about';
 $title   = 'من نحن | العربية لتأجير وصيانة العدد والمعدات';
-$description = 'تعرف على العربية لتأجير وصيانة العدد والمعدات: رؤيتنا، التزامنا بمعايير السلامة والجودة، وخدماتنا في تأجير معدات الرفع والتركيب لمشاريع الإنشاءات والصناعة في مصر.';
+$description = 'تعرف على العربية لتأجير وصيانة العدد والمعدات: تأجير معدات الرفع والتركيب، وخدمات الصيانة الصناعية واللحام والتقسية لمشاريع الإنشاءات والصناعات الثقيلة في مصر.';
 require_once __DIR__ . '/partials/config.php';
 require __DIR__ . '/partials/head.php';
 require __DIR__ . '/partials/header.php';
@@ -14,7 +14,7 @@ require __DIR__ . '/partials/header.php';
       <a href="/index.php">الرئيسية</a> / <span>من نحن</span>
     </div>
     <h1>من نحن</h1>
-    <p>شريككم المتخصص في تأجير معدات الرفع والتركيب والمعدات المساندة لمشاريع الإنشاءات والصناعة.</p>
+    <p>شريككم المتخصص في تأجير المعدات لمشاريع الإنشاءات والصناعة، وفي الصيانة واللحام والتقسية للصناعات الثقيلة.</p>
   </div>
 </section>
 
@@ -26,7 +26,7 @@ require __DIR__ . '/partials/header.php';
       </div>
     </div>
     <div data-reveal>
-      <span class="eyebrow">قصتنا</span>
+      <span class="eyebrow">تأجير المعدات</span>
       <h2 class="section-title">تأجير معدات رفع وتركيب بثقة وجاهزية كاملة</h2>
       <p class="section-sub">
         تأسست العربية لتأجير وصيانة العدد والمعدات لسد احتياج مقاولي الإنشاءات والمنشآت الصناعية في مصر إلى
@@ -38,6 +38,31 @@ require __DIR__ . '/partials/header.php';
         هدفنا أن نكون امتدادًا لفريق مشروعك: نساعدك في اختيار المعدة المناسبة، نوفر التوريد والتركيب
         في الموعد المحدد، ونتابع الصيانة الدورية طوال فترة الإيجار.
       </p>
+    </div>
+  </div>
+</section>
+
+<section class="section svc-block" style="padding-top:0">
+  <div class="container split">
+    <div data-reveal>
+      <span class="eyebrow svc">الصيانة واللحام</span>
+      <h2 class="section-title">خبرة في اللحام والميتالورجي للصناعات الثقيلة</h2>
+      <p class="section-sub">إلى جانب تأجير المعدات، يخدم فريق الصيانة لدينا مصانع الأسمنت والصناعات الثقيلة منذ أكثر
+        من عشر سنوات: إصلاح الشروخ والكسور في المكونات الحرجة، وتقسية الطواحين الرأسية والكسارات في الموقع، وحماية
+        المعدات بطلاءات الرش القوسي.</p>
+      <p class="section-sub">ومن خلال شراكتنا مع شركة BCC الفيتنامية، أصبحنا نصنّع ألواح CCO و D-Plate™ المقاومة للتآكل
+        محليًا، كما تنفذ ورشتنا أعمال التصنيع المعدني وفق مواصفات ASME.</p>
+      <ul class="check-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="currentColor"><path d="M20 6 9 17l-5-5" /></svg> أكثر من 250 عملية تقسية للطواحين الرأسية</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="currentColor"><path d="M20 6 9 17l-5-5" /></svg> السبائك صعبة اللحام: الحديد الزهر وصلب المنجنيز والصلب عالي السبائك</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="currentColor"><path d="M20 6 9 17l-5-5" /></svg> ثقة كبرى شركات الأسمنت في مصر</li>
+      </ul>
+      <a href="/services/index.php" class="btn btn-svc">استكشف خدمات الصيانة</a>
+    </div>
+    <div class="photo-grid" data-reveal>
+      <figure class="wide"><img src="/assets/img/services/dplate-pipe.jpg" alt="لحام ماسورة مقاومة للتآكل في ورشتنا" width="1200" height="923" loading="lazy"></figure>
+      <figure><img src="/assets/img/services/vrm-roller-welding.jpg" alt="تقسية أوتوماتيكية لبكرة طاحونة رأسية" width="900" height="1507" loading="lazy"></figure>
+      <figure><img src="/assets/img/services/repair-mill-welder.jpg" alt="إصلاح في الموقع داخل طاحونة" width="900" height="1168" loading="lazy"></figure>
     </div>
   </div>
 </section>

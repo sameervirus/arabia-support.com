@@ -2,7 +2,7 @@
 $lang    = 'ar';
 $pageKey = 'clients';
 $title   = 'عملاؤنا وقطاعات العمل | العربية لتأجير وصيانة العدد والمعدات';
-$description = 'نعمل مع مقاولي الإنشاءات والمنشآت الصناعية في قطاعات الطاقة والبترول والتصنيع، ونوفر معدات رفع وتركيب موثوقة تناسب متطلبات كل قطاع.';
+$description = 'نعمل مع مقاولي الإنشاءات والمنشآت الصناعية ومصانع الأسمنت في مصر، في تأجير معدات الرفع والتركيب وفي خدمات الصيانة واللحام والتقسية.';
 require_once __DIR__ . '/partials/config.php';
 require __DIR__ . '/partials/head.php';
 require __DIR__ . '/partials/header.php';
@@ -63,10 +63,10 @@ require __DIR__ . '/partials/header.php';
 <section class="section bg-tint">
   <div class="container">
     <div class="section-head center">
-      <span class="eyebrow">شركاء نجاحنا</span>
-      <h2 class="section-title">شعارات عملائنا</h2>
-      <p class="section-sub">هذا القسم مخصص لعرض شعارات عملائكم الفعليين — أضيفوا شعارات شركاتكم الشريكة هنا لتعزيز
-        الثقة لدى الزوار.</p>
+      <span class="eyebrow">تأجير المعدات</span>
+      <h2 class="section-title">عملاء تأجير المعدات</h2>
+      <p class="section-sub" style="margin-inline:auto">شركات المقاولات والمنشآت الصناعية التي تعتمد على أسطول معداتنا في
+        مشاريعها.</p>
     </div>
     <div class="logo-grid" data-reveal>
       <div class="logo-slot"><img src="/assets/img/clients/CCC.gif" /></div>
@@ -80,10 +80,25 @@ require __DIR__ . '/partials/header.php';
 
 <section class="section">
   <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow svc">الصيانة واللحام</span>
+      <h2 class="section-title">عملاء الصيانة واللحام</h2>
+      <p class="section-sub" style="margin-inline:auto">مصانع الأسمنت والأسمدة والصناعات الثقيلة التي تثق في فريق الصيانة واللحام لدينا.</p>
+    </div>
+    <div class="logo-grid cols-4" data-reveal>
+      <?php foreach ($SERVICE_CLIENTS as $file => $names): ?>
+      <div class="logo-slot"><img src="/assets/img/clients/<?= $file ?>" alt="<?= htmlspecialchars($names['ar']) ?>" loading="lazy"></div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
     <div class="cta-band" data-reveal>
       <div>
         <h3>عايز تبقى من عملائنا؟</h3>
-        <p>تواصل معنا وخلينا نناقش احتياجات مشروعك من معدات الرفع والتركيب.</p>
+        <p>تواصل معنا وخلينا نناقش احتياجات مشروعك من المعدات أو احتياجات مصنعك من الصيانة واللحام.</p>
       </div>
       <div style="display:flex;gap:14px;flex-wrap:wrap">
         <a href="/contact.php" class="btn btn-primary">تواصل معنا</a>

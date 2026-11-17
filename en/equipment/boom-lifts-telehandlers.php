@@ -33,7 +33,7 @@ require __DIR__ . '/../../partials/header.php';
           </div>
         </div>
         <div>
-          <h4>Telescopic Boom Lifts</h4>
+          <h3>Telescopic Boom Lifts</h3>
           <p>A straight boom provides the greatest horizontal reach — ideal for reaching distant points, with platform
             heights up to 34m and load capacities up to 500kg.</p>
           <div class="fleet-tags">
@@ -50,7 +50,7 @@ require __DIR__ . '/../../partials/header.php';
           </div>
         </div>
         <div>
-          <h4>Articulating Boom Lifts</h4>
+          <h3>Articulating Boom Lifts</h3>
           <p>A versatile jib takes you up and over obstacles for precise positioning, with platform heights from 20 to
             40 meters.</p>
           <div class="fleet-tags">
@@ -77,7 +77,7 @@ require __DIR__ . '/../../partials/header.php';
           </div>
         </div>
         <div>
-          <h4>Telehandlers</h4>
+          <h3>Telehandlers</h3>
           <p>An ultra-strong boom for lifting higher and farther with more confidence. Models with various capacities
             and heights let you choose the telehandler that best suits your job site — heights up to 18m and load
             capacity up to 4 tons.</p>
