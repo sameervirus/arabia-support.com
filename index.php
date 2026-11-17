@@ -1,4 +1,10 @@
 <?php
+// English is the default language: a visit to the bare domain ("/") goes to the English home page.
+// The Arabic home stays reachable at /index.php (the AR language switch links there directly).
+if (parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) === '/') {
+  header('Location: /en/index.php', true, 302);
+  exit;
+}
 $lang    = 'ar';
 $pageKey = 'home';
 $title   = 'العربية لتأجير وصيانة العدد والمعدات | تأجير المعدات والصيانة الصناعية واللحام في مصر';
@@ -8,7 +14,7 @@ $schema = [
   '@context' => 'https://schema.org',
   '@type' => 'LocalBusiness',
   'name' => $SITE['name_ar'],
-  'image' => $SITE['base_url'] . '/assets/img/og-cover.jpg',
+  'image' => $SITE['base_url'] . '/assets/img/og-share-en.jpg',
   'url' => $SITE['base_url'] . '/index.php',
   'telephone' => $SITE['phone_intl'],
   'email' => $SITE['email'],

@@ -21,13 +21,20 @@ $ogType    = $ogType ?? 'website';
 <link rel="canonical" href="<?= $canonical ?>">
 <link rel="alternate" hreflang="ar" href="<?= $urlAr ?>">
 <link rel="alternate" hreflang="en" href="<?= $urlEn ?>">
-<link rel="alternate" hreflang="x-default" href="<?= $urlAr ?>">
+<link rel="alternate" hreflang="x-default" href="<?= $urlEn ?>">
 
 <meta property="og:type" content="<?= $ogType ?>">
 <meta property="og:title" content="<?= htmlspecialchars($title) ?>">
 <meta property="og:description" content="<?= htmlspecialchars($description) ?>">
 <meta property="og:url" content="<?= $canonical ?>">
-<meta property="og:image" content="<?= $SITE['base_url'] ?>/assets/img/og-cover.jpg">
+<?php /* New file name on purpose: LinkedIn/Facebook cache images by URL, so changing the image means changing the name */ ?>
+<meta property="og:image" content="<?= $SITE['base_url'] ?>/assets/img/og-share-en.jpg">
+<meta property="og:image:secure_url" content="<?= $SITE['base_url'] ?>/assets/img/og-share-en.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:image:alt" content="Al-Arabia: Equipment Rental and Industrial Maintenance & Welding in Egypt">
+<meta name="twitter:image" content="<?= $SITE['base_url'] ?>/assets/img/og-share-en.jpg">
 <meta property="og:locale" content="<?= $lang === 'ar' ? 'ar_EG' : 'en_US' ?>">
 <meta property="og:site_name" content="<?= htmlspecialchars($SITE[$lang === 'ar' ? 'name_ar' : 'name_en']) ?>">
 <meta name="twitter:card" content="summary_large_image">
